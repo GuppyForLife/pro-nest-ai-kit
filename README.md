@@ -106,4 +106,3 @@ npm run dev
 ## 📝 License
 
 MIT
-EOF
