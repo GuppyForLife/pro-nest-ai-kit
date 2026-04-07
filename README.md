@@ -33,15 +33,15 @@ A production-ready, high-performance Monorepo for building AI-powered SaaS appli
 
 ### 🛡️ Secure API Layer
 
-Implemented a custom \`ClerkGuard\` in Nest.js that validates JWTs from the frontend. All AI routes are protected by default to prevent credit leakage.
+Implemented a custom `ClerkGuard` in Nest.js that validates JWTs from the frontend. All AI routes are protected by default to prevent credit leakage.
 
 ### 📊 Token-Based "FinOps"
 
-The Postgres schema includes a \`token_balance\` column in the \`users\` table. The backend is wired to deduct credits based on AI usage, allowing for immediate SaaS monetization.
+The Postgres schema includes a `token_balance` column in the `users` table. The backend is wired to deduct credits based on AI usage, allowing for immediate SaaS monetization.
 
 ### ⚡ Database Speed
 
-Utilizes Neon's serverless driver for sub-10ms queries and Drizzle's \`push\` mechanism for "no-headache" schema migrations.
+Utilizes Neon's serverless driver for sub-10ms queries and Drizzle's `push` mechanism for "no-headache" schema migrations.
 
 ---
 
@@ -59,15 +59,15 @@ Create a `.env` file in `apps/api` and `apps/web`:
 
 **`apps/api/.env`**
 ```env
-DATABASE*URL=postgresql://...
-CLERK_SECRET_KEY=sk_test*...
-CLERK*PUBLISHABLE_KEY=pk_test*...
+DATABASE_URL=postgresql://...
+CLERK_SECRET_KEY=sk_test_...
+CLERK_PUBLISHABLE_KEY=pk_test_...
 ```
 
 **`apps/web/.env.local`**
 ```env
-NEXT*PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test*...
-CLERK*SECRET_KEY=sk_test*...
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
