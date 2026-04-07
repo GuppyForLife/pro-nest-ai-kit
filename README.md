@@ -16,7 +16,7 @@ A production-ready, high-performance Monorepo for building AI-powered SaaS appli
 
 ## 📂 Project Structure
 
-\`\`\`text
+```text
 .
 ├── apps
 │ ├── web # Next.js Frontend (Port 3000)
@@ -25,7 +25,7 @@ A production-ready, high-performance Monorepo for building AI-powered SaaS appli
 │ └── typescript-config # Shared TS configurations
 ├── package.json
 └── turbo.json
-\`\`\`
+```
 
 ---
 
@@ -55,27 +55,27 @@ Utilizes Neon's serverless driver for sub-10ms queries and Drizzle's \`push\` me
 
 ### 2. Environment Setup
 
-Create a \`.env\` file in \`apps/api\` and \`apps/web\`:
+Create a `.env` file in `apps/api` and `apps/web`:
 
-**\`apps/api/.env\`**
-\`\`\`env
+**`apps/api/.env`**
+```env
 DATABASE*URL=postgresql://...
 CLERK_SECRET_KEY=sk_test*...
 CLERK*PUBLISHABLE_KEY=pk_test*...
-\`\`\`
+```
 
-**\`apps/web/.env.local\`**
-\`\`\`env
+**`apps/web/.env.local`**
+```env
 NEXT*PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test*...
 CLERK*SECRET_KEY=sk_test*...
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
-\`\`\`
+```
 
 ### 3. Install & Run
 
-\`\`\`bash
+```bash
 
 # Install dependencies for all apps
 
@@ -90,7 +90,7 @@ npx drizzle-kit push
 
 cd ../..
 npm run dev
-\`\`\`
+```
 
 ---
 
